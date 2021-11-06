@@ -1,5 +1,6 @@
 # enviroment setup
-jupyter lab
+##jupyter lab
+in terminal: pip install jupyterlab
 in terminal: jupyter-lab
 
 # resources 
