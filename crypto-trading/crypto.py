@@ -171,44 +171,16 @@ print(df.head())
 
 # variable types
 df.dtypes # https://www.skytowner.com/explore/converting_column_type_to_float_in_pandas_dataframe
-"""
-Out[37]: 
-0      int64
-1     object
-2     object
-3     object
-4     object
-5     object
-6      int64
-7     object
-8      int64
-9     object
-10    object
-11    object
-12     int64
-dtype: object
-"""
 
-"""
-#  callable 
-df.loc[indexer] - .loc is primarily label based, but may also be used with a boolean array.
-dfloc[indexer] .iloc is primarily integer position based (from 0 to length-1 of the axis
-
-df[:3] # slices variables
-df[::-1] # reverses df
-df1.iloc[:3]
-"""
-
-
-df[1] = df[1].astype("float")
-df[2] = df[2].astype("float")
-df[3] = df[3].astype("float")
-df[4] = df[4].astype("float")
-df[5] = df[5].astype("float")
-df[7] = df[7].astype("float")
-df[9] = df[9].astype("float")
-df[10] = df[10].astype("float")
-df[11] = df[11].astype("float")
+# >>> df[1] = df[1].astype("float")
+# >>> df[2] = df[2].astype("float")
+# >>> df[3] = df[3].astype("float")
+# >>> df[4] = df[4].astype("float")
+# >>> df[5] = df[5].astype("float")
+# >>> df[7] = df[7].astype("float")
+# >>> df[9] = df[9].astype("float")
+# >>> df[10] = df[10].astype("float")
+# >>> df[11] = df[11].astype("float")
 
 # Add Classification Column
 df[12] = 0
@@ -221,15 +193,6 @@ print(dataset.shape) # shape of numpy arr
 #-----------------------------------------------------------------------------------------------------------------------
 # add classification obervation
 #-----------------------------------------------------------------------------------------------------------------------
-"""
-nArr[:0] # first variable - row
-nArr[:, 0] # first obervation - column
-nArr[0,1] # first variable's second  obervation
-nArr[:2, :3] # all variables UNTIL variable 2 and all oberserations until obervation 3
-nArr[::-1]  # all elements, reversed
-nArr[5::-2]  # reversed every other from index 5
-"""
-
 for i in range(1, dataset.shape[0]):
     if dataset[i, 4] <= dataset[i - 1, 4] : # t is less than or equal to t-1
         dataset[i, 12] = 0
