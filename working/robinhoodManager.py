@@ -10,7 +10,7 @@ class RobinhoodInstance(): # robinhood instance
         self.login = robin.login(creds["username"], creds["password"], mfa_code=self.getMfaCode(creds["auth_key"]))
 
     def getCredentials(self): # get robinhood login credentials
-        file_name = "creds/robinhood.json"
+        file_name = "../creds/robinhood.json"
         with open(file_name) as f:
             data = json.load(f)
         return data
